@@ -41,7 +41,5 @@ except ValueError:
 except Exception as e:
     print(f'Erro desconhecido: {str(e)}')
     resultado = ''
-
-plot_traduzido = resultado
-msg = f'Titulo: {title}\nAno de Lançamento: {year}\nGenero: {genre}\nSinopse: {plot_traduzido}'
+msg = f'Titulo: {title}\nAno de Lançamento: {year}\nGenero: {genre}\nSinopse: {translated_plot}'
 print(msg)

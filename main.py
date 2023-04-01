@@ -45,11 +45,6 @@ except Exception as e:
     print(f'Erro desconhecido: {str(e)}')
     resultado = ''
 
-try:
-    plot_traduzido = languague.translate(plot)
-except StopIteration:
-    print('Não foi possível traduzir a sinopse do filme.')
-    plot_traduzido = ''
-
+plot_traduzido = resultado
 msg = f'Titulo: {title}\nAno de Lançamento: {year}\nGenero: {genre}\nSinopse: {plot_traduzido}'
 print(msg)

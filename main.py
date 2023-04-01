@@ -13,11 +13,9 @@ api_key = os.getenv('API_KEY')
 
 '''
 Proximos passos: 
-Traduzir nome do filme de en para pt-br
-Dar opção do usuário salvar o filme que foi pesquisado
-Criar função de random movie
-Dividir o codigo para deixar mais limpo
-
+Traduzir nome do filme de en para pt-br (Creio que não vai rolar, pq o nome original nem sempre se encaixa com a tradução.)
+Criar função de random movie (Pesquisar no OMDB como gerar uri)
+Dividir o codigo para deixar mais limpo 
 '''
 translator = Translator(from_lang="en", to_lang='pt-br')
 

@@ -3,10 +3,7 @@ from PIL import Image
 from translate import Translator
 from io import BytesIO
 import json
-from dotenv import load_dotenv
-import os
 
-load_dotenv(".env")
 translator = Translator(from_lang="en", to_lang='pt-br')
 movie_title = input('Informe um filme: ')
 api_movie = f'http://www.omdbapi.com/?apikey=30c395bf&t={movie_title}'

@@ -1,29 +1,36 @@
-# Descrição
+# Info Movie
 
-Este código utiliza a API do OMDb para recuperar informações sobre um filme especificado pelo usuário, incluindo título, ano de lançamento, gênero, sinopse e pôster. Ele também utiliza a biblioteca translate para traduzir a sinopse do filme do inglês para o português brasileiro.
-Pré-requisitos
+Este é um programa Python que utiliza a API do OMDB para buscar informações sobre filmes e exibir em uma interface gráfica simples. Ele também salva as informações do filme pesquisado em um arquivo de texto.
 
-### Antes de executar este código, certifique-se de ter as seguintes bibliotecas instaladas:
+# Pré-requisitos
+
+### Para executar o programa, é necessário ter o Python instalado, além dos seguintes pacotes Python:
 
     requests
-    PIL
-    translate
     json
+    textwrap
+    Pillow (PIL)
+    translate
+    dotenv
 
-##### Você também precisa se inscrever na API do OMDb e obter uma chave de API válida. Você pode fazer isso em http://www.omdbapi.com/.
+##### Além disso, é necessário obter uma chave de API do OMDB.
+## Instalação
+
+    Clone o repositório ou baixe o arquivo info_movie.py.
+    Instale as dependências do programa com o comando pip install -r requirements.txt.
+    Crie um arquivo .env na mesma pasta do arquivo info_movie.py e insira sua chave de API do OMDB no formato API_KEY=chave_de_api.
+
 ## Como usar
 
-    Certifique-se de que todas as bibliotecas necessárias foram instaladas e a chave de API do OMDb foi obtida.
-    Crie um arquivo .env na mesma pasta onde está o seu script Python e defina a variável API_KEY com a sua chave de API do OMDb.
-    Execute o script Python e insira o título do filme que você deseja procurar.
-    O script irá recuperar as informações do filme da API do OMDb e tentar traduzir a sinopse do filme para o português brasileiro.
-    Se a API do OMDb retornar uma URL de imagem para o pôster do filme, o script irá tentar baixar e salvar o pôster como um arquivo "poster.jpg" na mesma pasta onde está o seu script Python.
-    O script exibe as informações do filme, incluindo o título, ano de lançamento, gênero e sinopse traduzida (se disponível).
+Para executar o programa, abra o terminal na pasta onde o arquivo info_movie.py está localizado e execute o comando python info_movie.py.
 
-Limitações
+Uma janela com a interface gráfica será aberta. Digite o nome do filme que deseja pesquisar no campo de texto e pressione Enter ou clique no botão "Pesquisar Filme". As informações sobre o filme serão exibidas na tela, incluindo o título, ano de lançamento, gênero e sinopse.
 
-## Este código tem as seguintes limitações:
+As informações do filme pesquisado também serão salvas em um arquivo de texto chamado salvar_filmes.txt, localizado na mesma pasta do arquivo info_movie.py.
 
-    Ele só é capaz de recuperar informações sobre um único filme por vez.
-    A tradução da sinopse pode não ser 100% precisa e depende da qualidade da tradução fornecida pela API do translate.
-    O código não faz nenhuma validação de entrada do usuário, portanto, se o usuário inserir um título de filme inválido ou não fornecer entrada, o código pode falhar.
+## Imagens da interface gráfica
+
+Interface primária:
+![Interface Primária](https://i.imgur.com/dn62uGK.png)
+Interface após a pesquisa pelo filme ser concluída:
+![Interface Pesquisa](https://i.imgur.com/lWT1ubh.png)

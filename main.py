@@ -21,9 +21,14 @@ translator = Translator(from_lang="en", to_lang='pt-br')
 def movieSearch():
     movie_title = entry.get()
     api_movie = f'http://www.omdbapi.com/?apikey={api_key}&t={movie_title}'
-    
     response = requests.get(api_movie)
     data = response.json()
+    
+    if data['Response'] == 'False':
+         result.config(text='Informe um título valido', fg='red', font=12)
+         entry.delete(0, tk.END)
+        #  result.config(text='')
+         return
     
     title = data['Title']
     year = data['Year']
@@ -57,6 +62,9 @@ def movieSearch():
     msg = f'Titulo: {title}\nAno de Lançamento: {year}\nGenero: {genre}\nSinopse: {wrapped_plot}'
     result.config(text=msg)
 
+
+
+
 janela = tk.Tk()
 janela.title('Info Movie')
 font = ('Arial', 14)
@@ -70,6 +78,7 @@ search = tk.Button(janela, text='Pesquisar Filme', command=movieSearch)
 search.pack()
 
 result = tk.Label(janela, text=None, font=font)
+result.config(fg='black')
 result.pack()
 
 image_label = tk.Label(janela, image='')

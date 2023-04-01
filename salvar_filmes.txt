@@ -1,0 +1,4 @@
+Acessa o JSON do filme acessado e extrai as informações aqui:
+
+{"title": "Memento", "year": "2000", "genre": "Mystery, Thriller", "plot": "Um homem com perda de mem\u00f3ria de curto prazo tenta rastrear o assassino de sua esposa."}
+ 

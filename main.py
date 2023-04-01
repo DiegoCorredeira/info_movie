@@ -1,4 +1,5 @@
 import requests
+import json
 import textwrap
 from PIL import Image, ImageTk
 from translate import Translator
@@ -12,8 +13,10 @@ api_key = os.getenv('API_KEY')
 
 '''
 Proximos passos: 
-Criar GUI
 Traduzir nome do filme de en para pt-br
+Dar opção do usuário salvar o filme que foi pesquisado
+Criar função de random movie
+Dividir o codigo para deixar mais limpo
 
 '''
 translator = Translator(from_lang="en", to_lang='pt-br')
@@ -61,9 +64,21 @@ def movieSearch():
         wrapped_plot = ''
     msg = f'Titulo: {title}\nAno de Lançamento: {year}\nGenero: {genre}\nSinopse: {wrapped_plot}'
     result.config(text=msg)
+    entry.delete(0, tk.END)
 
+    saveMovie(title, year, genre, translated_plot)
 
-
+def saveMovie(title, year, genre, translated_plot):
+    data_movie = {
+        'title' : title,
+        'year' : year,
+        'genre' : genre,
+        'plot' : translated_plot,
+        
+    }
+    with open('salvar_filmes.txt', 'a', encoding='UTF-8') as arquivo:
+        arquivo.write(json.dumps(data_movie) + '\n \n')
+    
 
 janela = tk.Tk()
 janela.title('Info Movie')
@@ -80,7 +95,6 @@ search.pack()
 result = tk.Label(janela, text=None, font=font)
 result.config(fg='black')
 result.pack()
-
 image_label = tk.Label(janela, image='')
 image_label.pack()
 

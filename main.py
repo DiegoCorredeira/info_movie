@@ -6,45 +6,48 @@ import json
 from dotenv import load_dotenv
 import os
 
-config = load_dotenv(".env")
-languague = Translator(from_lang="en",to_lang='pt-br')
-API_MOVIE_KEY = os.getenv('API_KEY')
+load_dotenv(".env")
+translator = Translator(from_lang="en", to_lang='pt-br')
 movie_title = input('Informe um filme: ')
-api_movie = f'http://www.omdbapi.com/?apikey={API_MOVIE_KEY}&t={movie_title}'
+api_movie = f'http://www.omdbapi.com/?apikey=30c395bf&t={movie_title}'
 
 response = requests.get(api_movie)
-data = json.loads(response.text)
+data = response.json()
 
-title  = data['Title']
+title = data['Title']
 year = data['Year']
 runtime = data['Runtime']
 genre = data['Genre']
 plot = data['Plot']
 poster = data['Poster']
-diretor = data['Director']
+director = data['Director']
 
 response_poster = requests.get(poster)
 if 'image' in response_poster.headers['content-type']:
-    open_img = Image.open(BytesIO(response_poster.content))
-    open_img.save('poster.jpg')
-    open_img.show()
-
-
+    img = Image.open(BytesIO(response_poster.content))
+    img.save('poster.jpg')
+    img.show()
 else:
     print('A URL não contém uma imagem válida.')
 
 try:
-    resultado = languague.translate(plot)
+    translated_plot = translator.translate(plot)
 except StopIteration:
     print('Não foi possível traduzir a sinopse do filme.')
-    resultado = ''
+    translated_plot = ''
 except ValueError:
     print('A sinopse do filme é inválida.')
-    resultado = ''
+    translated_plot = ''
 except Exception as e:
     print(f'Erro desconhecido: {str(e)}')
+<<<<<<< HEAD
     resultado = ''
 
 plot_traduzido = resultado
 msg = f'Titulo: {title}\nAno de Lançamento: {year}\nGenero: {genre}\nSinopse: {plot_traduzido}'
+=======
+    translated_plot = ''
+
+msg = f'Título: {title}\nAno de Lançamento: {year}\nGênero: {genre}\nSinopse: {translated_plot}'
+>>>>>>> fa15949ae6dfb5a1b315cd8565baab4337d4dba7
 print(msg)

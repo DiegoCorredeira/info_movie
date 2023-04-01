@@ -2,3 +2,7 @@ Acessa o JSON do filme acessado e extrai as informações aqui:
 
 {"title": "Memento", "year": "2000", "genre": "Mystery, Thriller", "plot": "Um homem com perda de mem\u00f3ria de curto prazo tenta rastrear o assassino de sua esposa."}
  
+{"title": "You", "year": "2018\u2013", "genre": "Crime, Drama, Romance", "plot": "Um jovem perigosamente charmoso e intensamente obsessivo toma medidas extremas para se inserir na vida daqueles por quem est\u00e1 paralisado."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um novo assassino, que tem como alvo a menina e seus amigos usando filmes de terror como parte de um jogo mortal."}
+ 

@@ -32,5 +32,6 @@ As informações do filme pesquisado também serão salvas em um arquivo de text
 
 Interface primária:
 ![Interface Primária](https://i.imgur.com/dn62uGK.png)
+<br>
 Interface após a pesquisa pelo filme ser concluída:
 ![Interface Pesquisa](https://i.imgur.com/lWT1ubh.png)

@@ -40,14 +40,8 @@ except ValueError:
     translated_plot = ''
 except Exception as e:
     print(f'Erro desconhecido: {str(e)}')
-<<<<<<< HEAD
     resultado = ''
 
 plot_traduzido = resultado
 msg = f'Titulo: {title}\nAno de Lançamento: {year}\nGenero: {genre}\nSinopse: {plot_traduzido}'
-=======
-    translated_plot = ''
-
-msg = f'Título: {title}\nAno de Lançamento: {year}\nGênero: {genre}\nSinopse: {translated_plot}'
->>>>>>> fa15949ae6dfb5a1b315cd8565baab4337d4dba7
 print(msg)

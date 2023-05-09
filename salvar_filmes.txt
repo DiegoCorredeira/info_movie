@@ -6,3 +6,37 @@ Acessa o JSON do filme acessado e extrai as informações aqui:
  
 {"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um novo assassino, que tem como alvo a menina e seus amigos usando filmes de terror como parte de um jogo mortal."}
  
+{"title": "Scream VI", "year": "2023", "genre": "Horror, Mystery, Thriller", "plot": "No pr\u00f3ximo cap\u00edtulo, os sobreviventes dos assassinatos de Ghostface deixam Woodsboro para tr\u00e1s e come\u00e7am um novo cap\u00edtulo na cidade de Nova York."}
+ 
+{"title": "Parasyte: The Maxim", "year": "2014\u20132015", "genre": "Animation, Action, Drama", "plot": "Shinichi Izumi, de 17 anos, \u00e9 parcialmente infectado por um Parasyte, monstros que matam e consomem humanos. Ele deve aprender a coexistir com a criatura se quiser sobreviver tanto \u00e0 vida de um Parasyte quanto a de um humano como parte de um monstro, paranormal ou paranormal."}
+ 
+{"title": "Flamengo Paix\u00e3o", "year": "1980", "genre": "Documentary", "plot": "Document\u00e1rio sobre o Flamengo, um dos times de futebol mais populares do Brasil."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um assassino mascarado que tem como alvo ela e seus amigos, usando filmes de terror como parte de um jogo mortal."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um assassino mascarado que tem como alvo ela e seus amigos, usando filmes de terror como parte de um jogo mortal."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um assassino mascarado que tem como alvo ela e seus amigos, usando filmes de terror como parte de um jogo mortal."}
+ 
+{"title": "The Wolf of Wall Street", "year": "2013", "genre": "Biography, Comedy, Crime", "plot": "Baseado na hist\u00f3ria real de Jordan Belfort, de sua ascens\u00e3o a um rico corretor de a\u00e7\u00f5es vivendo a vida alta para sua queda envolvendo crime, corrup\u00e7\u00e3o e o governo federal."}
+ 
+{"title": "Try", "year": "2000", "genre": "Short, Drama", "plot": "Um curta-metragem sobre um jovem casal viciado em drogas."}
+ 
+{"title": "Try", "year": "2000", "genre": "Short, Drama", "plot": "Um curta-metragem sobre um jovem casal viciado em drogas."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um assassino mascarado que tem como alvo ela e seus amigos, usando filmes de terror como parte de um jogo mortal."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um assassino mascarado que tem como alvo ela e seus amigos, usando filmes de terror como parte de um jogo mortal."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um assassino mascarado que tem como alvo ela e seus amigos, usando filmes de terror como parte de um jogo mortal."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um assassino mascarado que tem como alvo ela e seus amigos, usando filmes de terror como parte de um jogo mortal."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um assassino mascarado que tem como alvo ela e seus amigos, usando filmes de terror como parte de um jogo mortal."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um assassino mascarado que tem como alvo ela e seus amigos, usando filmes de terror como parte de um jogo mortal."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um assassino mascarado que tem como alvo ela e seus amigos, usando filmes de terror como parte de um jogo mortal."}
+ 
+{"title": "Scream", "year": "1996", "genre": "Horror, Mystery", "plot": "Um ano ap\u00f3s o assassinato de sua m\u00e3e, uma adolescente \u00e9 aterrorizada por um assassino mascarado que tem como alvo ela e seus amigos, usando filmes de terror como parte de um jogo mortal."}
+ 

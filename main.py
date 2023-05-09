@@ -5,30 +5,23 @@ from PIL import Image, ImageTk
 from translate import Translator
 from io import BytesIO
 import tkinter as tk
+from ttkthemes import ThemedTk
 from dotenv import load_dotenv
 import os
 
-config = load_dotenv(".env")
-api_key = os.getenv('API_KEY')
-
-'''
-Proximos passos: 
-Traduzir nome do filme de en para pt-br (Creio que não vai rolar, pq o nome original nem sempre se encaixa com a tradução.)
-Criar função de random movie (Pesquisar no OMDB como gerar uri)
-Dividir o codigo para deixar mais limpo 
-'''
+# > Banco de dados dos pesquisados
+# > Talvez permitir busca por nome nacional
 translator = Translator(from_lang="en", to_lang='pt-br')
 
 def movieSearch():
     movie_title = entry.get()
-    api_movie = f'http://www.omdbapi.com/?apikey={api_key}&t={movie_title}'
+    api_movie = f'http://www.omdbapi.com/?apikey=30c395bf&t={movie_title}'
     response = requests.get(api_movie)
     data = response.json()
     
     if data['Response'] == 'False':
-         result.config(text='Informe um título valido', fg='red', font=12)
+         result.config(text='Informe um título valido', fg='red', font=font)
          entry.delete(0, tk.END)
-        #  result.config(text='')
          return
     
     title = data['Title']
@@ -51,17 +44,12 @@ def movieSearch():
     try:
         translated_plot = translator.translate(plot)
         wrapped_plot = textwrap.fill(translated_plot, width=60)
-    except StopIteration:
-        print('Não foi possível traduzir a sinopse do filme.')
-        wrapped_plot = ''
-    except ValueError:
-        print('A sinopse do filme é inválida.')
-        wrapped_plot = ''
     except Exception as e:
         print(f'Erro desconhecido: {str(e)}')
         wrapped_plot = ''
+        
     msg = f'Titulo: {title}\nAno de Lançamento: {year}\nGenero: {genre}\nSinopse: {wrapped_plot}'
-    result.config(text=msg)
+    result.config(text=msg, fg='black')
     entry.delete(0, tk.END)
 
     saveMovie(title, year, genre, translated_plot)
@@ -78,25 +66,29 @@ def saveMovie(title, year, genre, translated_plot):
         arquivo.write(json.dumps(data_movie) + '\n \n')
     
 
-janela = tk.Tk()
-janela.title('Info Movie')
+root = tk.Tk()
+root.title('DB Movie')
 font = ('Arial', 14)
 
-entry = tk.Entry(janela)
-entry.pack()
+entry = tk.Entry(root, font=font)
+entry.pack(padx=15, pady=15, side=tk.LEFT)
 
 entry.bind("<Return>", lambda x: movieSearch())
 
-search = tk.Button(janela, text='Pesquisar Filme', command=movieSearch)
-search.pack()
+search = tk.Button(root, text='Pesquisar Filme', command=movieSearch)
+search.pack(padx=15, pady=15, side=tk.LEFT)
 
-result = tk.Label(janela, text=None, font=font)
+
+image_label = tk.Label(root)
+image_label.pack(padx=10, pady=10, side=tk.RIGHT)
+
+
+result = tk.Label(root, font=font, justify='left', anchor='w', wraplength=500)
 result.config(fg='black')
-result.pack()
-image_label = tk.Label(janela, image='')
-image_label.pack()
+result.pack(padx=10, pady=10, side=tk.RIGHT)
 
-janela.mainloop()
+
+root.mainloop()
 
 
 
